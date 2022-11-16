@@ -27,9 +27,9 @@ mongoose.connect(dbUrl, options, (err) => {
 
 // Validate DB connection
 const db = mongoose.connection;
-db.on("error", console.error.bind(console, "connection error: "));
+db.on("error", console.error.bind(console, "Connection Error: "));
 db.once("open", function () {
-    console.log("Mongo DB Connected successfully");
+    console.log("MongoDB Connected successfully");
 });
 
 // Schema for post
